@@ -1,0 +1,12 @@
+#BOOLEAN RULES
+GATA2*= GATA2 and (not (GATA1 and FOG1)) and (not PU1)
+GATA1*= (GATA1 or GATA2 or Fli1) and (not PU1)
+FOG1*= GATA1
+EKLF*= GATA1 and (not Fli1)
+Fli1*= GATA1 and (not EKLF)
+SCL*= GATA1 and (not PU1)
+CEBPA*= CEBPA and (not (GATA1 and FOG1 and SCL))
+PU1*= (CEBPA or PU1) and (not (GATA1 or GATA2))
+cJun*= PU1 and (not Gfi1)
+EgrNab*= (PU1 and cJun) and (not Gfi1)
+Gfi1*= CEBPA and (not EgrNab)
